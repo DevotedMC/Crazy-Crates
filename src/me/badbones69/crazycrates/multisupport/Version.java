@@ -9,6 +9,7 @@ public enum Version {
 	v1_9_R1(191), v1_9_R2(192),
 	v1_10_R1(1101),
 	v1_11_R1(1111),
+	v1_12_R1(1121),
 	TOO_NEW(-2);
 	
 	Integer versionInteger;
@@ -28,6 +29,7 @@ public enum Version {
 		ver = ver.substring(ver.lastIndexOf('.')+1);
 		ver=ver.replaceAll("_", "").replaceAll("R", "").replaceAll("v", "");
 		int version = Integer.parseInt(ver);
+		if(version == Version.v1_12_R1.getVersionInteger())return Version.v1_12_R1;
 		if(version == Version.v1_11_R1.getVersionInteger())return Version.v1_11_R1;
 		if(version == Version.v1_10_R1.getVersionInteger())return Version.v1_10_R1;
 		if(version == Version.v1_9_R2.getVersionInteger())return Version.v1_9_R2;
