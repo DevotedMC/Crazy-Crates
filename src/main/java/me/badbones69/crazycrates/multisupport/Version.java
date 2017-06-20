@@ -30,14 +30,6 @@ public enum Version {
 		ver=ver.replaceAll("_", "").replaceAll("R", "").replaceAll("v", "");
 		int version = Integer.parseInt(ver);
 		if(version == Version.v1_12_R1.getVersionInteger())return Version.v1_12_R1;
-		if(version == Version.v1_11_R1.getVersionInteger())return Version.v1_11_R1;
-		if(version == Version.v1_10_R1.getVersionInteger())return Version.v1_10_R1;
-		if(version == Version.v1_9_R2.getVersionInteger())return Version.v1_9_R2;
-		if(version == Version.v1_9_R1.getVersionInteger())return Version.v1_9_R1;
-		if(version == Version.v1_8_R3.getVersionInteger())return Version.v1_8_R3;
-		if(version == Version.v1_8_R2.getVersionInteger())return Version.v1_8_R2;
-		if(version == Version.v1_8_R1.getVersionInteger())return Version.v1_8_R1;
-		if(version > Version.v1_11_R1.getVersionInteger()) return Version.TOO_NEW;
 		return Version.TOO_OLD;
 	}
 	
